@@ -22,7 +22,9 @@ public class MvcMemberListServlet extends HttpServlet {
         req.setAttribute("members", members );
 
         String viewPath = "/WEB-INF/views/members.jsp";
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher(viewPath);
+
+        //중복되는 아래의의 코드들
+       RequestDispatcher requestDispatcher = req.getRequestDispatcher(viewPath);
         requestDispatcher.forward(req, resp);
     }
 }
