@@ -16,6 +16,8 @@ import java.util.List;
 public class MvcMemberListServlet extends HttpServlet {
 
     MemberRepository memberRepository = MemberRepository.getInstance();
+    // static으로 불러온 MemberRepository , 싱글톤형식 스프링을 쓰기전이므로 싱글톤으로 구현 하나의 인스턴스로 돌려가면서 사용한다.
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Member> members = memberRepository.findAll();
@@ -24,7 +26,7 @@ public class MvcMemberListServlet extends HttpServlet {
         String viewPath = "/WEB-INF/views/members.jsp";
 
         //중복되는 아래의의 코드들
-       RequestDispatcher requestDispatcher = req.getRequestDispatcher(viewPath);
-        requestDispatcher.forward(req, resp);
+       RequestDispatcher dispatcher = req.getRequestDispatcher(viewPath);
+        dispatcher.forward(req, resp);
     }
 }

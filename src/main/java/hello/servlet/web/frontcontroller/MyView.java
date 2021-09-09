@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
+ * MyView 위치는 V3와 공유하기 위해서 FrontController와 같은 위치에 둠
  * MyView
  * 기존의 JSP페이지로의 이동을 렌더링한다고 표현
  */
@@ -23,7 +24,7 @@ public class MyView {
     public void render(HttpServletRequest request , HttpServletResponse response) throws ServletException , IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
-    }
+    } //view로직을 분리하여 render 메서드를 생성
 
     /**
      * forEach로 모델의 정보들을 다 꺼내준다.

@@ -24,5 +24,6 @@ public class MemberFormControllerV2 implements ControllerV2 {
     @Override
     public MyView process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         return new MyView("/WEB-INF/views/new-form.jsp");
+        //해당 컨트롤러에서 보여줘야하는 페이지의 경로를 MyView에 주입
     }
 }

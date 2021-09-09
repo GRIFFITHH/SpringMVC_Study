@@ -8,6 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * 가장 기초적인 모습의 Servlet
+ * HttpServletRequest req 객체로 요청을 받고 , HttpServletResponse resp 로 응답을 받는다.
+ * JSP에서 회원가입 버튼을 누르면 설정된 URL주소로 인하여 /servlet-mvc/members/new-form 을 요청
+ * req를 이용하여 뷰로 이동하도록한다. 이때 viewPath가 필요
+ * forword()메서드에 req,resp를 담아서 jsp를 불러온다.
+ */
+
 @WebServlet(name = "mvcMemberFormServlet", urlPatterns = "/servlet-mvc/members/new-form")
 public class MvcMemberFormServlet extends HttpServlet {
 

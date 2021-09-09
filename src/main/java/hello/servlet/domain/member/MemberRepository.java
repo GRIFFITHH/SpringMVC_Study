@@ -9,6 +9,7 @@ public class MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
+    //회원의 아이디로 사용할 변수이다. static으로 지정해줘야 모든 Repository객체들이 공유할 수 있다.
 
     private static final MemberRepository instance = new MemberRepository();
     //싱글톤
