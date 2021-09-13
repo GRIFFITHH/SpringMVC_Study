@@ -87,7 +87,6 @@ public class FrontControllerServletV5 extends HttpServlet {
 
     private Object getHandler(HttpServletRequest req) {
         String requestURI = req.getRequestURI(); // 요청받은 URI를 저장
-        Object handler = handlerMappingMap.get(requestURI);
-        return handler;
+        return handlerMappingMap.get(requestURI);
     }
 }
