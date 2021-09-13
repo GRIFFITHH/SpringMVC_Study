@@ -30,6 +30,7 @@ public class FrontControllerServletV4 extends HttpServlet {
         controllerMap.put("/front-controller/v4/members/new-form", new MemberFormControllerV4()); // 맵에 담는과정
         controllerMap.put("/front-controller/v4/members/save", new MemberSaveControllerV4());
         controllerMap.put("/front-controller/v4/members", new MemberListControllerV4());
+
     }
 
     @Override
@@ -49,7 +50,7 @@ public class FrontControllerServletV4 extends HttpServlet {
 
 
         Map<String, String> paramMap = createParamMap(req);
-        Map<String, Object> model = new HashMap<>();//V4추가
+        Map<String, Object> model = new HashMap<>();//추가
         String viewName = controller.process(paramMap, model);
 
         MyView view = viewResolver(viewName);
