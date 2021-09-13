@@ -9,9 +9,9 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class ModelView {
-    private String viewName;
-    private Map<String, Object> model = new HashMap<>();
+public class ModelView { //Model 과 View의 역할을 한다. 참고로 스프링 MVC에는 Model&View를 동시에 관장하는 기능이 존재
+    private String viewName; // 뷰의 논리적이름을 가져감
+    private Map<String, Object> model = new HashMap<>(); // 모델을 가져감
 
     public ModelView(String viewName) {
         this.viewName = viewName;

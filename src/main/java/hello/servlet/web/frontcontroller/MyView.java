@@ -37,9 +37,10 @@ public class MyView {
         modelToRequestAttribute(model, req);
         RequestDispatcher dispatcher = req.getRequestDispatcher(viewPath);
         dispatcher.forward(req , resp);
-    }
+    }//오버로딩
 
     private void modelToRequestAttribute(Map<String, Object> model, HttpServletRequest req) {
         model.forEach((key, value) -> req.setAttribute(key,value));
+        //req에 있는 데이터를 전부 꺼내서 , 모델에 넣어준다.
     }
 }
