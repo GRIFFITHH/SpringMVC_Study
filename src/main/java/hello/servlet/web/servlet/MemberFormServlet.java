@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Only servlet
+ */
 
 @WebServlet(name = "memberFormServlet",urlPatterns = "/servlet/members/new-form")
 public class MemberFormServlet extends HttpServlet {

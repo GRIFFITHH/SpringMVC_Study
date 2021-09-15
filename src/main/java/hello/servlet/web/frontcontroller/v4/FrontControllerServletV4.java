@@ -52,6 +52,7 @@ public class FrontControllerServletV4 extends HttpServlet {
         Map<String, String> paramMap = createParamMap(req);
         Map<String, Object> model = new HashMap<>();//추가
         String viewName = controller.process(paramMap, model);
+        //추가한 model을 컨트롤러에 넣으면 모델에 member를 저장, 컨트롤러는 반환하지는 않음
 
         MyView view = viewResolver(viewName);
         // 코드의 흐름이 보일수있게끔 메서드화 해서 코드를 줄이자.

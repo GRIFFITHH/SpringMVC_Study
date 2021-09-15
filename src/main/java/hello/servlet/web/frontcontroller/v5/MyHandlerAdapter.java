@@ -10,6 +10,7 @@ import java.io.IOException;
 public interface MyHandlerAdapter {
 
     boolean supports(Object handler);
+    //어댑터가 해당 컨트롤러를 처리할 수 있는지 판단하는 메서드다.
 
     ModelView handle(HttpServletRequest req, HttpServletResponse response , Object handler) throws ServletException, IOException;
 }
